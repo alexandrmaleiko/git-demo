@@ -1,0 +1,96 @@
+//пользователь вводит 4 числа с клавиатуры - определить наименьшее
+
+package sample;
+import java.util.Scanner;
+import javax.print.DocFlavor;
+
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int a;
+        System.out.println("Input number 1 :");
+        a = sc.nextInt();
+
+        int b;
+        System.out.println("Input number 2 :");
+        b = sc.nextInt();
+
+        int c;
+        System.out.println("Input number 3 :");
+        c = sc.nextInt();
+
+        int d;
+
+        System.out.println("Input number 4:");
+        d = sc.nextInt();
+
+
+        if (a < b && a < c && a < d) {
+            System.out.println("min :" + a);
+        } else System.out.println();
+
+        if (b < a && b < c && b < d) {
+            System.out.println("min :" + b);
+        } else System.out.println();
+
+        if (c < a && c < b && c < d) {
+            System.out.println("min :" + c);
+        } else System.out.println();
+
+        if (d < a && d < b && d < a) {
+            System.out.println("min :" + d);
+        } else System.out.println();
+
+    }
+}
+
+//БОЛЕЕ ПРОСТОЕ РЕШЕНИЕ
+
+package sample;
+import java.util.Scanner;
+import javax.print.DocFlavor;
+
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int a;
+        System.out.println("Input number 1 :");
+        a = sc.nextInt();
+
+        int b;
+        System.out.println("Input number 2 :");
+        b = sc.nextInt();
+
+        int c;
+        System.out.println("Input number 3 :");
+        c = sc.nextInt();
+
+        int d;
+        System.out.println("Input number 4 :");
+        d = sc.nextInt();
+
+        int min;
+        min = a;
+
+        if (b < min) ;
+        {
+            min = b;
+        }
+
+        if (c < min) ;
+        {
+            min =c;
+        }
+
+
+        if (d < min) ;
+            min =d;
+
+        {
+            System.out.println("min :" + min);
+        }
+    }
+}

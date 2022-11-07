@@ -1,0 +1,48 @@
+//Нарисовать фигуру из звездочек
+//* * * * *
+//*       *
+//*       *
+//* * * * *
+// Совет - рисуем всегда прямоугольник из звездочек с помощью заготовки
+// for (int i = 1; i <= h; i++) {
+//            for (int j = 1; j <= k; j++) {
+//  дальше условными операторами задаем условия
+// работаем всегда с цифрами - затем их уже меняем на переменные - к примеру использую 3 и 4
+package sample;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int h;
+        int k;
+
+        System.out.println("Введите число h");
+        h = sc.nextInt();
+
+        System.out.println("Введите число k");
+        k = sc.nextInt();
+
+        for (int i = 1; i <= h; i++) {
+            for (int j = 1; j <= k; j++) {
+                    if (j >1 && j<k && i>1 && i<h && h>1 ) {
+                        System.out.print(" ");
+
+                    } else {
+                        System.out.print("*");
+
+                    }
+                }
+                if (i > 1 || i < k)
+                    System.out.println();
+            }
+        }
+    }
+// j - это счетчик каждого символа в строке
+// k - это количество символов в 1 строке
+// h - это количество строк
+
+
+
+

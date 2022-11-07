@@ -1,0 +1,43 @@
+// Есть круг с радиусом r=4, написать программу где пользователь при вводе
+// координат x;y может узнать попадает -точка в круг или нет
+
+
+package sample;
+import java.util.Scanner;
+import javax.print.DocFlavor;
+
+
+
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        double x;
+        double y;
+        int p = 4;
+
+
+
+        System.out.println("Input number x :");
+        x = sc.nextDouble();
+
+        System.out.println("Input number y :");
+        y = sc.nextDouble();
+
+
+        if ((x * x)+(y * y) <= p) {
+            System.out.println(" Точка : "  + " Попадает в круг");
+        } else
+            {System.out.println(" Точка : "  + " Не попадает в круг");}
+
+
+            }
+        }
+
+
+
+
+
+
+

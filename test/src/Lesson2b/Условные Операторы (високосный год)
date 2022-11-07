@@ -1,0 +1,20 @@
+//определить количество дней в году от пользователя (высокосный делится на 4 без остатка, но если делится на 100
+//без остатка -то невысокосный, если делится на 400 без остатка -то высокосный)
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int number;
+
+        System.out.println("Input number :");
+        number = sc.nextInt();
+
+        if ((number % 400 == 0) || (number % 100 != 0 && number % 4 == 0)) {
+            System.out.println("Высокосный год : " + 366 + " дней");
+        } else
+            {System.out.println("Невысокосный год : " + 365 + " дней");}
+
+
+            }
+        }

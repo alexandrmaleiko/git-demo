@@ -1,0 +1,44 @@
+//дано шестизначное число - проверить палндром ли оно - читается одинаково и справа и слева - 143341
+
+package sample;
+import java.util.Scanner;
+
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int number;
+        int n1;
+        int n2;
+        int n3;
+        int n4;
+        int n5;
+        int n6;
+
+        System.out.println("Введите число в формате XXXXXX :");
+        number = sc.nextInt();
+        n1 = number % 10;
+        System.out.println(n1);
+        n2 = number / 10 % 10;
+        System.out.println(n2);
+        n3 = number / 100 % 10;
+        System.out.println(n3);
+        n4 = number / 1000 % 10;
+        System.out.println(n4);
+        n5 = number / 10000 % 10;
+        System.out.println(n3);
+        n6 = number / 100000 % 10;
+        System.out.println(n4);
+
+
+        if (n1 == n6  && n2 == n5 && n3 == n4) {
+            System.out.println("Число > : "  + "палиндром");
+            } else {
+            System.out.println("Число > : " + "не палиндром");
+
+        }
+
+    }
+
+}

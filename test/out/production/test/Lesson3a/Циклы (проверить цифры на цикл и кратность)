@@ -1,0 +1,27 @@
+package sample;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int start;
+        System.out.println("start :");
+        start = sc.nextInt();
+        int end;
+        System.out.println("end :");
+        end = sc.nextInt();
+
+        int sum = 0;
+
+        if (end >= start) {
+            for (int i = start; i <= end; i++) {    //начинаю со start/заканчиваю end/ шаг в 1
+                if (i % 3 == 0) {                   //если при делении на 3 остаток 0
+                    sum = sum + i;
+                }
+            }
+                    System.out.println(sum); }
+        else { System.out.println("Error");
+                }
+            }
+        }

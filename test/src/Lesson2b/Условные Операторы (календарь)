@@ -1,0 +1,100 @@
+// 1.0.определние дня недели по номеру 1 -Понедельник / 7 -воскресенье
+// 1.1.определение дня недели в месяце
+
+package sample;
+import java.util.Scanner;
+import javax.print.DocFlavor;
+
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int day;
+        int Monday = 1;
+        int Thusday = 2;
+        int Wendsday = 3;
+        int Firthday = 4;
+        int Friday = 5;
+        int Saturday = 6;
+        int Sunday = 7;
+        System.out.println("Input day :");
+        day = sc.nextInt();
+
+        if (day == 1) {
+            System.out.println("Monday");
+        }
+
+        if (day == 2) {
+            System.out.println("Tuesday");
+        }
+
+        if (day == 3) {
+            System.out.println("Wendsday");
+        }
+
+        if (day == 4) {
+            System.out.println("Thursday");
+        }
+
+        if (day == 5) {
+            System.out.println("Friday");
+        }
+
+        if (day == 6) {
+            System.out.println("Saturday");
+        }
+
+        if (day == 7) {
+            System.out.println("Sunday");
+        }
+
+    }
+    }
+
+
+//РЕШЕНИЕ 2 (СВИТЧ + ОСТАТОК ОТ ДЕЛЕНИЯ)
+package sample;
+import java.util.Scanner;
+import javax.print.DocFlavor;
+
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int day;
+
+        System.out.println("Input day :");
+        day = sc.nextInt();
+
+        if (day >= 1 && day <=31) {
+
+            switch (day%7) {   //остаток от деления: 7/1;  7/2; 7/3 ...
+                case 1:
+                    System.out.println("Понедельник");
+                    break;
+                case 2:
+                    System.out.println("Вторник");
+                    break;
+                case 3:
+                    System.out.println("Среда");
+                    break;
+                case 4:
+                    System.out.println("Четверг");
+                    break;
+                case 5:
+                    System.out.println("Пятница");
+                    break;
+                case 6:
+                    System.out.println("Суббота");
+                    break;
+                case 0:
+                    System.out.println("Воскресенье");
+                    break;}
+            } else {
+            System.out.println("Ошибка ввода");
+
+
+        }
+        }
+
+    }

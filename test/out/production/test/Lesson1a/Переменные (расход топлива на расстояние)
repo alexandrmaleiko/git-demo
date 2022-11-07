@@ -1,0 +1,39 @@
+package sample;
+import java.util.Scanner;
+
+Public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+      /*  int way;
+        way = 216;
+
+        int fullway;
+        fullway = way *2;
+
+        double cost;
+        cost =28;
+
+        double kml;
+        kml = 100/8;
+
+        double totalpatrol;
+        totalpatrol = fullway / kml;
+
+        double Total; */1
+
+
+        System.out.println("Введите цену топлива");
+        double fuilPrice = sc.nextDouble();
+
+        int fuilR =8;
+
+        System.out.println("ВВведите дистанцию");
+        int distance = sc.nextInt();
+
+        double Total;
+        Total = (distance*2)/(100.0/8)* fuilPrice;
+
+
+        System.out.println("Total: " + Total + "UAH");
+    }
+

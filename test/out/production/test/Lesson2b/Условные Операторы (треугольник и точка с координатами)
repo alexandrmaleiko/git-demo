@@ -1,0 +1,67 @@
+// дан треугольник с вершинами в следующих координатах:
+// A (0;0); B(4;4); C(6;1)
+// написать прогу -которая определит - лежит ли точка с координатами x;y от пользователя в треугольнике
+
+//1. Считаем площадь треугольника (формула герона или стороны-синус)
+//2. Бьем треугольник на 3 (с помощью этой точки).
+//3. Считаем сумму площадей.
+//4. Совпадает-внутри, нет-снаружи.
+// Формула S по площади Sabc=(x2-x1)(y3-y1)-(x3-x1)(y2-y1) по модулю
+
+package sample;
+import java.util.Scanner;
+
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int x1 = 0; // первая точка вершины A
+        int y1 = 0; // вторая точка вершины A
+        int x2 = 4; // первая точка вершины B
+        int y2 = 4; // вторая точка вершины B
+        int x3 = 6; // первая точка вершины C
+        int y3 = 1; // вторая точка вершины C
+        double s;
+        double s1;
+        double s2;
+        double s3;
+        double sum;
+
+
+        double x4; // первая точка вершины D
+        double y4; // вторая точка вершины D
+
+        System.out.println("Input number x :");
+        x4 = sc.nextDouble();
+
+        System.out.println("Input number y :");
+        y4 = sc.nextDouble();
+
+        s = ((x2-x1)*(y3-y1)-(x3-x1)*(y2-y1))/2;
+        System.out.println(Math.abs( s));
+
+        s1 = ((x2-x4)*(y3-y4)-(x3-x4)*(y2-y4))/2;
+        System.out.println(Math.abs( s1));;
+
+        s2 = ((x4-x1)*(y3-y1)-(x3-x1)*(y4-y1))/2;
+        System.out.println(Math.abs( s2));;
+
+        s3 = ((x2-x1)*(y4-y1)-(x4-x1)*(y2-y1))/2;
+        System.out.println(Math.abs( s3));
+
+
+        if ((Math.abs(s) ==  (Math.abs(s1) + (Math.abs(s2) +(Math.abs(s3)))))) { //берем каждую переменную в модуль
+            System.out.println(" Точка : "  + " Попадает в треугольник");
+        } else
+        {System.out.println(" Точка: "  + " Не попадает в тругольник");}
+
+            }
+        }
+
+
+
+
+
+
+

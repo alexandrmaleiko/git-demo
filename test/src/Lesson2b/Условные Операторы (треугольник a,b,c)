@@ -1,0 +1,43 @@
+// Треугольник существует если сумма его любых 2-ух сторон больше его третьей стороны
+// Написать программу -существует такой треугольник или нет
+// Исключающее или ^
+
+package sample;
+import java.util.Scanner;
+import javax.print.DocFlavor;
+
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int a;
+        int b;
+        int c;
+
+        System.out.println("Input number a :");
+        a = sc.nextInt();
+
+        System.out.println("Input number b :");
+        b = sc.nextInt();
+
+        System.out.println("Input number c :");
+        c = sc.nextInt();
+
+
+
+        if ((a+b) > c ^ (b+c) > a ^ (a+c) > b) {
+            System.out.println(" Треугольник : "  + " Существует");
+        } else
+            {System.out.println(" Треугольник : "  + " Не существует");}
+
+
+            }
+        }
+
+
+
+
+
+
+

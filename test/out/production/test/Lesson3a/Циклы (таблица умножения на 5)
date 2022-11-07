@@ -1,0 +1,19 @@
+//вывести таблицу умножения на 5
+
+package sample;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n =10;
+        int j = 5;
+
+            for (int i = 1; i <= n; i = i +1)
+            {
+                System.out.println(i +"*" +j +"=" +i*j);
+            }
+
+        }
+    }
